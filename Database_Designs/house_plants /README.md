@@ -1,10 +1,11 @@
 House Plants Database
-===============
-![A schema design for my house plants database.](./house_plants/house_plants_schema.pdf)  
+=============== 
    
 OVERVIEW
 --------
 A database I created to help me from accidentally killing my partners houseplants.
+
+![A schema design for my house plants database.](./other/house_plants_schema.png) 
 
 ---
 
