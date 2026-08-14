@@ -1,0 +1,35 @@
+Table sunlight_profiles as sun {
+  id integer [pk]
+  sunlight_hours varchar(20)
+  sun_position varchar(10)
+}
+
+Table rooms as room {
+  id integer [pk]
+  name varchar(50)
+  sunlight_id integer [ref: > sun.id]
+}
+
+Table plants as p {
+  id integer [pk]
+  nickname varchar(50)
+  species varchar(100)
+  pot_size varchar(20)
+  watering_method varchar(20)
+  watering_instructions text
+  room_id integer [ref: > room.id]
+}
+
+Table days_of_week as dw {
+  id integer [pk]
+  day_name varchar(10)
+}
+
+Table plant_watering_schedules as pw {
+  plant_id integer [ref: > p.id]
+  day_id integer [ref: > dw.id]
+  
+  indexes {
+    (plant_id, day_id) [pk]
+  }
+}
