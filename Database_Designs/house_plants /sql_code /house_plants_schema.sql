@@ -25,7 +25,7 @@ CREATE TABLE "days_of_week" (
   "day_name" varchar(10)
 );
 
-CREATE TABLE "plant_watering_schedules" (
+CREATE TABLE "plant_watering_schedules_summer" (
   "plant_id" integer,
   "day_id" integer,
   PRIMARY KEY ("plant_id", "day_id")
